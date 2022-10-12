@@ -1,0 +1,32 @@
+********** MIGRACIONES ******************
+
+-- Crear una nueva tabla 
+php artisan make:migration create_users_table
+
+-- Para los tiempos
+$table->timestamps();
+
+-- Hacer una clave foranea
+$table->foreign('user_id')->references('id')->on('users');
+    user_id = Clave foranea en la tabla
+    id = Clave primaria de la tabla de que se va a referenciar
+    users = Nombre de la tabla que se va a referenciar
+
+-- Para que se autoajuste la clabe foranea se usa:
+      ->onUpdate('cascade')
+      ->onDelete('cascade');
+
+-- Eliminar datos de las tablas y migrar
+php artisan migrate:fresh --seed
+
+***************** MODELOS ******************
+- Para los tiempos
+public $timestamps = false;
+
+- Para los atributos
+protected $fillable = [
+        'name', 'email', 'password',
+    ];
+
+- Para las relaciones
+https://laravel.com/docs/9.x/eloquent-relationships
