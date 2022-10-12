@@ -30,3 +30,47 @@ protected $fillable = [
 
 - Para las relaciones
 https://laravel.com/docs/9.x/eloquent-relationships
+
+*************** GIT ****************
+
+>>> Iniciando Repositorio
+
+- Iniciamos GIT en la carpeta donde esta el proyecto
+    git init
+
+- Clonamos el repositorio de github o bitbucket
+    git clone <url>
+
+- Añadimos todos los archivos para el commit
+    git add .
+
+- Hacemos el primer commit
+    git commit -m "Texto que identifique por que se hizo el commit"
+
+- Subimos al repositorio
+    git push origin master
+
+>>> Git add
+
+- Añadimos todos los archivos para el commit
+    git add .
+
+- Añadimos el archivo para el commit (archivo especifico)
+	git add <archivo>
+
+>>> Git commit
+
+- Agregar y Cargar en el HEAD los cambios realizados
+	git commit -a -m "Texto que identifique por que se hizo el commit"
+
+>>> Git Push
+
+- Subimos al repositorio
+	git push <origien> <branch> or git push
+
+>>> Git Log
+
+- Muestras los cambios en los commits
+	git log --oneline
+
+---- Para más información: https://gist.github.com/dasdo/9ff71c5c0efa037441b6
