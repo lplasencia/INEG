@@ -93,4 +93,8 @@ https://laravel.com/docs/9.x/eloquent-relationships
 - Muestras los cambios en los commits
 	git log --oneline
 
+>>> Regresar a un commit anterior y volver
+    https://www.youtube.com/watch?v=zQYKx3H06Rc
+    LA RAMA PRINCIPAL ES MAIN NO MASTER
+
 ---- Para más información: https://gist.github.com/dasdo/9ff71c5c0efa037441b6
