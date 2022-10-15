@@ -98,3 +98,16 @@ https://laravel.com/docs/9.x/eloquent-relationships
     LA RAMA PRINCIPAL ES MAIN NO MASTER
 
 ---- Para más información: https://gist.github.com/dasdo/9ff71c5c0efa037441b6
+
+
+**************** TO DO *************************
+Info acerca de Todo:
+- Poner cualquier cosa y luego ":" para indicar división o grupo de actividades
+  ☐ Press Cmd/Ctrl+Enter to add a new todo
+  ✔ Press Alt+D to mark a todo as done
+  ✘ Press Alt+C to mark a todo as cancelled
+  ☐ Press Alt+S to mark a todo as started
+  ☐ There are some special, customizable tags: @critical @high @low @today
+  ☐ Use tildes for ~strikethrough~ (alt+126)
+  ☐ Use underscores for _italic_
+  ☐ Use asterisks for *bold*
