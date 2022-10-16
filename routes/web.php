@@ -23,6 +23,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //********************************* PROFILE *****************************************************
 Route::get('profile/index','ProfileController@index')->name('profile.index');
+Route::put('profile/update/{id}','ProfileController@update')->name('profile.update');
+Route::get(('cancelarProfile'), function(){
+    return redirect()->route('home')->with('datos', 'Acción Cancelada');
+})->name('cancelarProfile');
+
+//********************************* PERMIT *****************************************************
+Route::get('profile/index','ProfileController@index')->name('profile.index');
 Route::get('mantenimiento/empleado/create','EmployeeController@create')->name('empleado.create');
 Route::post('mantenimiento/empleado/store','EmployeeController@store')->name('empleado.store');
 Route::get('mantenimiento/empleado/edit/{id}','EmployeeController@edit')->name('empleado.edit');
@@ -31,6 +38,5 @@ Route::get('supplier/edit/{id}','SupplierController@edit')->name('supplier.edit'
 Route::get(('cancelarProfile'), function(){
     return redirect()->route('home')->with('datos', 'Acción Cancelada');
 })->name('cancelarProfile');
-
 
 

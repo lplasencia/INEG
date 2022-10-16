@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <!-- Site wrapper -->
@@ -68,7 +70,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar main-sidebar-custom sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{route('home')}}" class="brand-link">
+    <a style="text-decoration:none;" href="{{route('home')}}" class="brand-link">
       <img src="../img/gato_logo.jpg" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">INEG Vol.02</span>
     </a>
@@ -87,7 +89,7 @@
             $user = Auth::user();
 
         @endphp
-          <a href="#" class="d-block">{{$user->profile->nombre}}</a>
+          <a style="text-decoration:none;" href="{{route('profile.index')}}" class="d-block">{{$user->profile->nombre}}</a>
         </div>
       </div>
 
@@ -181,6 +183,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <!-- Separación con la cabecera -->
+      @if (session('datos'))
+      <div class="alert alert-success alert-dismissible fade show" >
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <strong>{{ session('datos') }}</strong> 
+      </div>
+      @endif
     </section>
 
     <!-- Main content -->

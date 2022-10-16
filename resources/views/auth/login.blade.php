@@ -32,7 +32,8 @@
         @csrf
         @error('email')
         <div class="alert alert-danger" role="alert">
-            <strong>{{ "Email o Password invalidos" }}</strong>
+          <strong>{{ "Email o Password invalidos" }}</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
         </div>  
         @enderror
         <div class="input-group mb-3">

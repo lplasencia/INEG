@@ -18,8 +18,8 @@ class CreateProfilesTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('apellido');
-            $table->string('direccion');
-            $table->string('telefono');
+            $table->string('direccion')->nullable();
+            $table->string('telefono')->nullable();
             $table->string('foto');
             $table->unsignedBigInteger('user_id');
  
