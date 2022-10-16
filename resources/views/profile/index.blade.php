@@ -12,8 +12,9 @@
           <h3 class="card-title">PERFIL DE USUARIO</h3>
         </div>
         <!-- /.card-header -->
+
         <!-- form start -->
-        <form method="POST" action="{{ route('profile.update',$profile->id) }}">
+        <form method="POST" enctype="multipart/form-data" action="{{ route('profile.update',$profile->id) }}">
           @method('put') @csrf
           <div class="card-body">
             <div style="align-items: center; justify-content: center;" class="row mt-1">
@@ -49,13 +50,16 @@
               </div>
             </div>
 
-            <div style="align-items: center; justify-content: center;" class="row mt-4">
+            <div style="align-items: center; justify-content: center; margin-bottom: 15px" class="row mt-4">
               <div class="col-md-11">
                 <label for="exampleInputFile">Foto :</label>
-                <div class="input-group">
+                <div class="row">
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="exampleInputFile">
-                    <label class="custom-file-label" for="exampleInputFile">Eliga Archivo</label>
+                    <input type="file" name="file" accept="image/*" class="custom-file-input @error('file') is-invalid @enderror" id="exampleInputFile">
+                    <label class="custom-file-label @error('file') is-invalid @enderror" for="exampleInputFile">Eliga Archivo</label>
+                    @error('file')
+                    <div class="row mt-10" style="color:red;">{{ $message }}</div>
+                    @enderror
                   </div>
                 </div>
               </div>

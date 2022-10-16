@@ -20,7 +20,7 @@ class CreateProfilesTable extends Migration
             $table->string('apellido');
             $table->string('direccion')->nullable();
             $table->string('telefono')->nullable();
-            $table->string('foto');
+            $table->string('foto')->nullable();
             $table->unsignedBigInteger('user_id');
  
             $table->timestamps();

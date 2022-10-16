@@ -111,3 +111,7 @@ Info acerca de Todo:
   ☐ Use tildes for ~strikethrough~ (alt+126)
   ☐ Use underscores for _italic_
   ☐ Use asterisks for *bold*
+
+
+***************** MANEJO DE IMAGENES **************************
+https://www.youtube.com/watch?v=8x9UoYCVGGI

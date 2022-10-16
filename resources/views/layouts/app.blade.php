@@ -75,20 +75,24 @@
       <span class="brand-text font-weight-light">INEG Vol.02</span>
     </a>
 
+    <?php
+      use Illuminate\Support\Facades\Auth;
+      $user = Auth::user();
+
+      if(is_null($user->profile->foto))
+        $url = "../img/user.png";
+      else
+        $url = $user->profile->foto;
+    ?>
+
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="{{$url}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-        @php
-            use Illuminate\Support\Facades\Auth;
-
-            $user = Auth::user();
-
-        @endphp
           <a style="text-decoration:none;" href="{{route('profile.index')}}" class="d-block">{{$user->profile->nombre}}</a>
         </div>
       </div>

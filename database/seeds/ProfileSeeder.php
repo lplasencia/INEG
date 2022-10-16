@@ -17,7 +17,7 @@ class ProfileSeeder extends Seeder
             'apellido' => 'Plasencia Amaya',
             'direccion' => 'Av. Luis Alberto Sanches Mz A lote 14',
             'telefono' => '949503135',
-            'foto' => 'foto.jpg',
+            'foto' => null,
             'user_id' => 1
         ]);
     }
