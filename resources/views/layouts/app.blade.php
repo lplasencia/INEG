@@ -47,7 +47,7 @@
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="{{route('profile.index')}}" class="dropdown-item">
             <i class="fas fa-user-circle mr-2"></i> Perfil
           </a>
           <div class="dropdown-divider"></div>
@@ -68,8 +68,8 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar main-sidebar-custom sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="../../index3.html" class="brand-link">
-      <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <a href="{{route('home')}}" class="brand-link">
+      <img src="../img/gato_logo.jpg" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">INEG Vol.02</span>
     </a>
 
@@ -81,7 +81,13 @@
           <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+        @php
+            use Illuminate\Support\Facades\Auth;
+
+            $user = Auth::user();
+
+        @endphp
+          <a href="#" class="d-block">{{$user->profile->nombre}}</a>
         </div>
       </div>
 
@@ -200,11 +206,18 @@
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- bs-custom-file-input -->
+<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+$(function () {
+  bsCustomFileInput.init();
+});
+</script>
+
 </body>
 </html>

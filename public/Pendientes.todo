@@ -3,5 +3,7 @@ Actividades a Realizar:
 
     Generales:
         ✔ Poner que el mensaje en el login de no se reconocio email o password sea sobre @done(22-10-15 18:54)
-        ☐ Cambiar el logo en el app de la pagina
+        ✔ Cambiar el logo en el app de la pagina @done(22-10-15 20:55)
+        ☐ Hacer que cuando se registre un nuevo usuario ingrese nombre y apellido que se registrara en el perfil
+        ☐ Hacer lo de la foto en el perfil que se registre y que se muestre
 
