@@ -47,6 +47,9 @@ php artisan migrate:fresh --seed
 - Para los tiempos
 public $timestamps = false;
 
+- Para el nombre de la tabla 
+protected $table = "categorias";
+
 - Para los atributos
 protected $fillable = [
         'name', 'email', 'password',
