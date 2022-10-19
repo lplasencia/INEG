@@ -6,6 +6,10 @@ php artisan make:model NombreEnSingular -m
 -- Crear una nueva tabla 
 php artisan make:migration create_users_table
 
+-- Para que se vean las relaciones en MySQL (Poner en todas las tablas)
+$table->engine = 'InnoDB';
+
+
 -- Para los tiempos
 $table->timestamps();
 
