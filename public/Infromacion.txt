@@ -90,10 +90,28 @@ https://laravel.com/docs/9.x/eloquent-relationships
 - Agregar y Cargar en el HEAD los cambios realizados
 	git commit -a -m "Texto que identifique por que se hizo el commit"
 
+>>> Crear una rama local
+    git checkout -b <branch-name>
+
+>>> Crear la rama local de forma remota
+    git push origin <branch-name>
+
+>>> Unir las ramas locales
+    - Primero ir al principal
+        git checkout main
+    -Luego se hace el merge
+        git merge jeff/feature1
+
 >>> Git Push
 
 - Subimos al repositorio
 	git push <origien> <branch> or git push
+
+>>> Eliminar rama local 
+    git branch -d localBranchName
+
+>>> Eliminar la branch remota
+    git push origin --delete remoteBranchName
 
 >>> Git Log
 
