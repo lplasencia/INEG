@@ -30,6 +30,12 @@ Luego hacer la clave foranea:
       ->onUpdate('cascade')
       ->onDelete('cascade');
 
+-- Comando para crear Factory diciendo el modelo
+    php artisan make:factory ProductoFactory --model=Producto 
+
+-- Codigo para llamar al factory desde el seeder 
+    factory(Categoria::class,10)->create();
+
 -- Eliminar datos de las tablas y migrar
 php artisan migrate:fresh --seed
 
